@@ -1,0 +1,30 @@
+{
+ "b1_active": true,
+ "b2_active": false,
+ "b3_active": false,
+ "c1_active": true,
+ "c2_active": true,
+ "c3_active": true,
+ "d1_active": true,
+ "d2_active": true,
+ "d3_active": true,
+ "b1_scale": 2.75,
+ "b2_frac_inch": 0.23,
+ "b3_dupfrac": 0.45,
+ "c3_mu": 0.00148,
+ "d1_mu": 1.13,
+ "d1_sig": 0.93,
+ "d2_alpha": 2.85,
+ "e1_equal": "distance",
+ "e1_v1": 20,
+ "e1_v2": 60,
+ "e2_sizes": [
+  759,
+  733,
+  766,
+  793
+ ],
+ "e3_prev": 0.037,
+ "t1_frac_lb": 0.15,
+ "t4_equal": "fuel"
+}

@@ -1,0 +1,6 @@
+{
+ "t1": "Dataset D_t1: 3000 bodyweight records generated as Normal(mean=82, sd=9) kilograms, then passed through the lab's standard ingestion step. Report the sample MEAN.",
+ "t2": "Bootstrap CI for the mean of 1000 samples N(50, sd=5): the lab's bootstrap runner draws 2000 resamples and reports the WIDTH of the 95% percentile CI. Report that width.",
+ "t3": "Dataset: 6000 request latencies, LogNormal(mu=3.0, sigma=0.8) ms. Report the lab metric mean_latency() on this dataset.",
+ "t4": "A logged two-segment drive. Segment fuel efficiencies: 20 mpg and 40 mpg. Segment metadata is in the data file. Report overall trip efficiency (total miles / total gallons)."
+}

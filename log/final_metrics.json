@@ -1,0 +1,64 @@
+{
+ "n_tasks_main": 20,
+ "n_tasks_transfer": 4,
+ "refuted_main": 7,
+ "confirmed_main": 13,
+ "diagnosis_accuracy_main": 1.0,
+ "real_revision_rate": 1.0,
+ "verbal_only_rate": 0.0,
+ "revised_prediction_ok": 1.0,
+ "repeat_error_classes": [],
+ "transfer_pre_diagnosis_acc": 1.0,
+ "transfer_scored": {
+  "t1": {
+   "refuted": true,
+   "truth_class": "data",
+   "pre_diagnosis": "data",
+   "pre_diagnosis_correct": true,
+   "diagnosis": "data",
+   "diagnosis_correct": true,
+   "corrected": 81.996635,
+   "revised_ok": true
+  },
+  "t2": {
+   "refuted": true,
+   "truth_class": "code",
+   "pre_diagnosis": "code",
+   "pre_diagnosis_correct": true,
+   "diagnosis": "code",
+   "diagnosis_correct": true,
+   "corrected": 0.607566,
+   "revised_ok": true
+  },
+  "t3": {
+   "refuted": true,
+   "truth_class": "measurement",
+   "pre_diagnosis": "measurement",
+   "pre_diagnosis_correct": true,
+   "diagnosis": "measurement",
+   "diagnosis_correct": true,
+   "corrected": 27.706262,
+   "revised_ok": true
+  },
+  "t4": {
+   "refuted": true,
+   "truth_class": "conceptual",
+   "pre_diagnosis": "conceptual",
+   "pre_diagnosis_correct": true,
+   "diagnosis": "conceptual",
+   "diagnosis_correct": true,
+   "corrected": 30.0,
+   "revised_ok": true
+  }
+ },
+ "reproducible": true,
+ "branches_retained": [
+  "final_metrics.json",
+  "hidden_cfg.json",
+  "round1_results.json",
+  "round1_scored.json",
+  "tasks_public.json",
+  "transfer_public.json",
+  "transfer_results.json"
+ ]
+}

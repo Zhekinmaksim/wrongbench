@@ -1,0 +1,22 @@
+{
+ "a1": "20000 simulated rooms; people enter one by one with uniform random birthdays (365 days). Report the MEAN index (1-based) of the first person whose birthday repeats an earlier one.",
+ "a2": "Coupon collector, 50 distinct coupons, uniform draws, 20000 trials. Report MEAN number of draws to complete the set.",
+ "a3": "Simple symmetric +/-1 random walk from 0, 100 steps, 200000 walks. Report P(walk returns to 0 at least once within the 100 steps).",
+ "a4": "Monte-Carlo pi: each estimate uses n=10000 uniform points in the unit square; 2000 independent estimates. Report the STANDARD DEVIATION of the 2000 estimates.",
+ "a5": "First 5000 Fibonacci numbers (F1=1). Report fraction whose leading digit is 1.",
+ "a6": "100-prisoners problem, cycle-following strategy, 100000 trials. Report success probability (all prisoners find their number in <=50 box openings).",
+ "a7": "Secretary problem, n=100 candidates, classic 'observe first 37 then take first better' rule, 100000 trials. Report P(best candidate selected).",
+ "a8": "Truncated St. Petersburg: fair coin, payoff 2^k where k is the flip index of the first head, k capped at 20 (if no head by 20, payoff 2^20). 200000 trials. Report the MEAN payoff.",
+ "b1": "Dataset D_b1: 5000 samples generated as Exponential(scale=2.75), then passed through the lab's standard ingestion step. Report the sample MEAN of the ingested dataset.",
+ "b2": "Dataset D_b2: 4000 adult height records, generated as Normal(mean=175, sd=7) centimeters, then passed through the lab's standard ingestion step. Report the sample MEAN of the ingested dataset.",
+ "b3": "Dataset D_b3: 2000 daily returns generated as Normal(0, sd=0.02), then passed through the lab's standard ingestion step. Report the STANDARD ERROR OF THE MEAN as computed by the standard estimator sd/sqrt(n) on the ingested dataset.",
+ "c1": "E[max of 5 iid U(0,1)] estimated by the lab's trial runner: 1000 trials, each trial averages 100 sampled maxima. Report the STANDARD DEVIATION of the 1000 per-trial estimates.",
+ "c2": "Dataset: 5000 samples U(10,11). The lab's mean() implementation computes the mean. Report the computed mean.",
+ "c3": "Log-price series: 4000 steps, each step log-return Normal(mu=0.00148, sd=0.0004). The lab's total_return() sums per-step log-returns over the series. Report the computed total log-return.",
+ "d1": "Dataset: 6000 samples LogNormal(mu=1.13, sigma=0.93). Report the value of the lab metric central_tendency_mean() on this dataset.",
+ "d2": "Dataset: 8000 samples Pareto(alpha=2.85, xm=1). Report the value of the lab metric robust_mean() on this dataset.",
+ "d3": "Dataset: 6000 samples Exponential(scale=2.0). Report the value of the lab metric average() on this dataset.",
+ "e1": "A logged two-segment trip. Segment speeds: 20 km/h and 60 km/h. Segment metadata (lengths/durations) is in the data file. Report the trip's overall average speed (total distance / total time).",
+ "e2": "A/B outcome log with four strata (two per arm). Per-stratum success rates: A1=0.93, A2=0.73, B1=0.87, B2=0.69. Stratum sizes are in the data file. Report the OVERALL pooled success rate of arm A minus arm B (pooled_A - pooled_B).",
+ "e3": "Diagnostic test: sensitivity 0.95, specificity 0.95. A screened population sample is in the data file. Report P(disease | positive test) in that population."
+}

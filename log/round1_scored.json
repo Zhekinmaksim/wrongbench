@@ -1,0 +1,125 @@
+{
+ "a1": {
+  "status": "confirmed"
+ },
+ "a2": {
+  "status": "confirmed"
+ },
+ "a3": {
+  "status": "confirmed"
+ },
+ "a4": {
+  "status": "confirmed"
+ },
+ "a5": {
+  "status": "confirmed"
+ },
+ "a6": {
+  "status": "confirmed"
+ },
+ "a7": {
+  "status": "confirmed"
+ },
+ "a8": {
+  "status": "confirmed"
+ },
+ "b1": {
+  "status": "refuted",
+  "diagnosis": "data",
+  "truth_class": "data",
+  "diagnosis_correct": true,
+  "observed": 2.30154,
+  "corrected": 2.743009,
+  "revised_prediction": 2.75,
+  "revised_ok": true,
+  "real_revision": true,
+  "verbal_only": false
+ },
+ "b2": {
+  "status": "confirmed"
+ },
+ "b3": {
+  "status": "confirmed"
+ },
+ "c1": {
+  "status": "refuted",
+  "diagnosis": "code",
+  "truth_class": "code",
+  "diagnosis_correct": true,
+  "observed": 0.0,
+  "corrected": 0.014152,
+  "revised_prediction": 0.0141,
+  "revised_ok": true,
+  "real_revision": true,
+  "verbal_only": false
+ },
+ "c2": {
+  "status": "refuted",
+  "diagnosis": "code",
+  "truth_class": "code",
+  "diagnosis_correct": true,
+  "observed": 10.0,
+  "corrected": 10.504293,
+  "revised_prediction": 10.5,
+  "revised_ok": true,
+  "real_revision": true,
+  "verbal_only": false
+ },
+ "c3": {
+  "status": "refuted",
+  "diagnosis": "code",
+  "truth_class": "code",
+  "diagnosis_correct": true,
+  "observed": 2.912397,
+  "corrected": 5.849856,
+  "revised_prediction": 5.92,
+  "revised_ok": true,
+  "real_revision": true,
+  "verbal_only": false
+ },
+ "d1": {
+  "status": "refuted",
+  "diagnosis": "measurement",
+  "truth_class": "measurement",
+  "diagnosis_correct": true,
+  "observed": 3.162049,
+  "corrected": 4.811901,
+  "revised_prediction": 4.77,
+  "revised_ok": true,
+  "real_revision": true,
+  "verbal_only": false
+ },
+ "d2": {
+  "status": "confirmed"
+ },
+ "d3": {
+  "status": "refuted",
+  "diagnosis": "measurement",
+  "truth_class": "measurement",
+  "diagnosis_correct": true,
+  "observed": 1.672345,
+  "corrected": 2.019925,
+  "revised_prediction": 2.0,
+  "revised_ok": true,
+  "real_revision": true,
+  "verbal_only": false
+ },
+ "e1": {
+  "status": "confirmed"
+ },
+ "e2": {
+  "status": "confirmed"
+ },
+ "e3": {
+  "status": "refuted",
+  "diagnosis": "conceptual",
+  "truth_class": "conceptual",
+  "diagnosis_correct": true,
+  "observed": 0.421969,
+  "corrected": 0.421969,
+  "revised_prediction": 0.422,
+  "revised_ok": true,
+  "real_revision": true,
+  "verbal_only": false
+ }
+}

@@ -1,0 +1,16 @@
+{
+ "b1": {"diagnosis": "data", "value": 2.75, "tol": 0.12,
+   "model_change": "Ingestion silently censors top 5% (quantile guard). Censored Exp mean = s*(1-e^-q(q/s+1))/0.95 -> 0.837*2.75=2.30, matches observed. Revised model: mean of UNCENSORED data = 2.75; pipeline must drop the outlier guard for heavy-tailed data."},
+ "c1": {"diagnosis": "code", "value": 0.0141, "tol": 0.002,
+   "model_change": "Trial runner reseeds RNG with a constant inside the loop -> all 1000 trials identical -> zero variance. Fix: seed once outside loop. Revised prediction restores sd(single max)/sqrt(100)."},
+ "c2": {"diagnosis": "code", "value": 10.5, "tol": 0.05,
+   "model_change": "mean() uses integer floor division (sum // n), flooring 10.5 to 10.0. Fix: true division. Hypothesis itself was correct."},
+ "c3": {"diagnosis": "code", "value": 5.92, "tol": 0.15,
+   "model_change": "total_return() slices xs[:n//2], summing only half the series (obs 2.91 ~ n/2*mu). Fix: sum full series -> n*mu = 5.92."},
+ "d1": {"diagnosis": "measurement", "value": 4.77, "tol": 0.35,
+   "model_change": "central_tendency_mean() returns the MEDIAN. For LogNormal, median = exp(mu) = 3.10 (matches obs 3.16), mean = exp(mu+sigma^2/2) = 4.77. The metric, not the hypothesis, was wrong. Fix: use arithmetic mean."},
+ "d3": {"diagnosis": "measurement", "value": 2.0, "tol": 0.08,
+   "model_change": "average() is a 10% two-sided trimmed mean. Exponential is right-skewed, so trimming removes more mass from the top -> 1.67 < 2.0. Untrimmed mean = 2.0. Fix: report trimming explicitly or use full mean."},
+ "e3": {"diagnosis": "conceptual", "value": 0.422, "tol": 0.01,
+   "model_change": "My frame treated prevalence as fixable by assumption (2%). PPV is undefined without the base rate - it is a two-parameter question I compressed into one. With revealed prevalence 0.037: PPV = 0.95*0.037/(0.95*0.037+0.05*0.963) = 0.422. Revised concept set: always carry prevalence as an explicit variable."}
+}

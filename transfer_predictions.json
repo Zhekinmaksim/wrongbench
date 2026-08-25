@@ -1,0 +1,10 @@
+{
+ "t1": {"value": 82.0, "tol": 0.5, "suspected_class": "data",
+   "hypothesis": "Clean mean = 82 kg. But this lab's 'standard ingestion' has a record of silent data mutation (b1 censoring, b2 unit-mix candidate). Pre-registered suspicion: unit mixing (kg/lb) -> observed mean will land above 82 by 1.20462*f*82 for hidden fraction f."},
+ "t2": {"value": 0.62, "tol": 0.06, "suspected_class": "code",
+   "hypothesis": "Clean 95% percentile CI width = 2*1.96*5/sqrt(1000) = 0.62. Pre-registered suspicion: the runner reseeds the RNG per replicate like c1 -> width collapses toward 0."},
+ "t3": {"value": 27.66, "tol": 1.2, "suspected_class": "measurement",
+   "hypothesis": "Clean LogNormal mean = exp(3 + 0.32) = 27.66 ms. Pre-registered suspicion: lab metrics rename transformed statistics (d1 median-as-mean, d3 trim) -> mean_latency() likely trims or medians, landing below 27.66."},
+ "t4": {"value": 26.67, "tol": 1.0, "suspected_class": "conceptual",
+   "hypothesis": "If segments are equal-distance, efficiency = harmonic mean = 26.67 mpg; if equal-fuel, arithmetic = 30. Frame is hidden (e1 lesson). Committing to equal-distance harmonic; if refuted at ~30, the frame assumption, not the arithmetic, is wrong."}
+}

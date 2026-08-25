@@ -1,0 +1,7 @@
+Reply to https://x.com/ProfBuehlerMIT/status/2076860122077499820:
+
+Hypothesis generation is getting cheap - error attribution is not. I built a small falsification benchmark for the other half of the loop: 24 pre-registered quantitative predictions, hidden defects in data / code / metrics / framing, and scored recovery from refutation.
+
+Ran it on the agent I have full access to. 11 refutations, 11/11 correct error-class diagnoses, 0 verbal excuses, 4/4 transfer. Best part: the harness caught two bugs in its own scoring while running.
+
+Full writeup: [ARTICLE_LINK]

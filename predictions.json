@@ -1,0 +1,22 @@
+{
+ "a1": {"value": 24.62, "tol": 0.3, "hypothesis": "E[first collision index] = sum k*P(...) ~ 24.62 for 365 days"},
+ "a2": {"value": 224.96, "tol": 2.0, "hypothesis": "n*H_n = 50*H_50 ~ 224.96"},
+ "a3": {"value": 0.920, "tol": 0.005, "hypothesis": "1 - C(100,50)/4^50 ~ 1 - 0.0796"},
+ "a4": {"value": 0.01642, "tol": 0.001, "hypothesis": "sd = sqrt(16*(pi/4)(1-pi/4)/10000)"},
+ "a5": {"value": 0.301, "tol": 0.005, "hypothesis": "Fibonacci obeys Benford, log10(2) share for digit 1"},
+ "a6": {"value": 0.3118, "tol": 0.005, "hypothesis": "1 - (H_100 - H_50)"},
+ "a7": {"value": 0.371, "tol": 0.005, "hypothesis": "cutoff-37 rule success ~ 1/e with finite-n correction"},
+ "a8": {"value": 21.0, "tol": 1.0, "hypothesis": "EV = 19 terms of 1 + cap term 2 = 21; sample mean of 200k trials should approximate EV"},
+ "b1": {"value": 2.75, "tol": 0.1, "hypothesis": "sample mean of Exp(scale=2.75) ~ 2.75; ingestion assumed neutral"},
+ "b2": {"value": 175.0, "tol": 0.5, "hypothesis": "sample mean ~ population mean 175 cm; ingestion assumed neutral"},
+ "b3": {"value": 0.000447, "tol": 0.00003, "hypothesis": "SE = 0.02/sqrt(2000); ingestion assumed neutral"},
+ "c1": {"value": 0.0141, "tol": 0.002, "hypothesis": "sd(single max)=0.1409, /sqrt(100) per trial"},
+ "c2": {"value": 10.5, "tol": 0.05, "hypothesis": "mean of U(10,11) = 10.5; lab mean() assumed correct"},
+ "c3": {"value": 5.92, "tol": 0.15, "hypothesis": "sum = n*mu = 4000*0.00148; lab total_return() assumed correct"},
+ "d1": {"value": 4.771, "tol": 0.35, "hypothesis": "lognormal mean = exp(mu + sigma^2/2); metric assumed to be the mean"},
+ "d2": {"value": 1.5405, "tol": 0.05, "hypothesis": "Pareto mean = a/(a-1), a=2.85; 'robust_mean' assumed unbiased for the mean"},
+ "d3": {"value": 2.0, "tol": 0.07, "hypothesis": "Exp(scale 2) mean = 2; 'average' assumed to be arithmetic mean"},
+ "e1": {"value": 30.0, "tol": 2.0, "hypothesis": "assume equal-distance segments -> harmonic mean 2*20*60/80 = 30"},
+ "e2": {"value": 0.05, "tol": 0.02, "hypothesis": "assume equal strata weights -> (0.83 - 0.78) = 0.05"},
+ "e3": {"value": 0.279, "tol": 0.05, "hypothesis": "assume screening prevalence ~2% -> PPV = 0.95*0.02/(0.95*0.02+0.05*0.98)"}
+}

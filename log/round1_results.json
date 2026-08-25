@@ -1,0 +1,205 @@
+{
+ "ts": 1784302727.3223178,
+ "results": {
+  "a1": {
+   "prediction": {
+    "value": 24.62,
+    "tol": 0.3,
+    "hypothesis": "E[first collision index] = sum k*P(...) ~ 24.62 for 365 days"
+   },
+   "observed": 24.7071,
+   "refuted": false,
+   "reveal": null
+  },
+  "a2": {
+   "prediction": {
+    "value": 224.96,
+    "tol": 2.0,
+    "hypothesis": "n*H_n = 50*H_50 ~ 224.96"
+   },
+   "observed": 225.3676,
+   "refuted": false,
+   "reveal": null
+  },
+  "a3": {
+   "prediction": {
+    "value": 0.92,
+    "tol": 0.005,
+    "hypothesis": "1 - C(100,50)/4^50 ~ 1 - 0.0796"
+   },
+   "observed": 0.92005,
+   "refuted": false,
+   "reveal": null
+  },
+  "a4": {
+   "prediction": {
+    "value": 0.01642,
+    "tol": 0.001,
+    "hypothesis": "sd = sqrt(16*(pi/4)(1-pi/4)/10000)"
+   },
+   "observed": 0.016111,
+   "refuted": false,
+   "reveal": null
+  },
+  "a5": {
+   "prediction": {
+    "value": 0.301,
+    "tol": 0.005,
+    "hypothesis": "Fibonacci obeys Benford, log10(2) share for digit 1"
+   },
+   "observed": 0.301,
+   "refuted": false,
+   "reveal": null
+  },
+  "a6": {
+   "prediction": {
+    "value": 0.3118,
+    "tol": 0.005,
+    "hypothesis": "1 - (H_100 - H_50)"
+   },
+   "observed": 0.31049,
+   "refuted": false,
+   "reveal": null
+  },
+  "a7": {
+   "prediction": {
+    "value": 0.371,
+    "tol": 0.005,
+    "hypothesis": "cutoff-37 rule success ~ 1/e with finite-n correction"
+   },
+   "observed": 0.37107,
+   "refuted": false,
+   "reveal": null
+  },
+  "a8": {
+   "prediction": {
+    "value": 21.0,
+    "tol": 1.0,
+    "hypothesis": "EV = 19 terms of 1 + cap term 2 = 21; sample mean of 200k trials should approximate EV"
+   },
+   "observed": 20.56969,
+   "refuted": false,
+   "reveal": null
+  },
+  "b1": {
+   "prediction": {
+    "value": 2.75,
+    "tol": 0.1,
+    "hypothesis": "sample mean of Exp(scale=2.75) ~ 2.75; ingestion assumed neutral"
+   },
+   "observed": 2.30154,
+   "refuted": true,
+   "reveal": "def ingest(xs):\n    q = quantile(xs, 0.95)\n    return [x for x in xs if x <= q]   # 'outlier guard'"
+  },
+  "b2": {
+   "prediction": {
+    "value": 175.0,
+    "tol": 0.5,
+    "hypothesis": "sample mean ~ population mean 175 cm; ingestion assumed neutral"
+   },
+   "observed": 174.850673,
+   "refuted": false,
+   "reveal": null
+  },
+  "b3": {
+   "prediction": {
+    "value": 0.000447,
+    "tol": 3e-05,
+    "hypothesis": "SE = 0.02/sqrt(2000); ingestion assumed neutral"
+   },
+   "observed": 0.00044,
+   "refuted": false,
+   "reveal": null
+  },
+  "c1": {
+   "prediction": {
+    "value": 0.0141,
+    "tol": 0.002,
+    "hypothesis": "sd(single max)=0.1409, /sqrt(100) per trial"
+   },
+   "observed": 0.0,
+   "refuted": true,
+   "reveal": "for t in range(1000):\n    rr = random.Random(12345)\n    est = mean(max5_uniform(rr) for _ in range(100))"
+  },
+  "c2": {
+   "prediction": {
+    "value": 10.5,
+    "tol": 0.05,
+    "hypothesis": "mean of U(10,11) = 10.5; lab mean() assumed correct"
+   },
+   "observed": 10.0,
+   "refuted": true,
+   "reveal": "def mean(xs):\n    return sum(xs) // len(xs)"
+  },
+  "c3": {
+   "prediction": {
+    "value": 5.92,
+    "tol": 0.15,
+    "hypothesis": "sum = n*mu = 4000*0.00148; lab total_return() assumed correct"
+   },
+   "observed": 2.912397,
+   "refuted": true,
+   "reveal": "def total_return(xs):\n    return sum(xs[: len(xs)//2 ])"
+  },
+  "d1": {
+   "prediction": {
+    "value": 4.771,
+    "tol": 0.35,
+    "hypothesis": "lognormal mean = exp(mu + sigma^2/2); metric assumed to be the mean"
+   },
+   "observed": 3.162049,
+   "refuted": true,
+   "reveal": "def central_tendency_mean(xs):\n    return median(xs)"
+  },
+  "d2": {
+   "prediction": {
+    "value": 1.5405,
+    "tol": 0.05,
+    "hypothesis": "Pareto mean = a/(a-1), a=2.85; 'robust_mean' assumed unbiased for the mean"
+   },
+   "observed": 1.530331,
+   "refuted": false,
+   "reveal": null
+  },
+  "d3": {
+   "prediction": {
+    "value": 2.0,
+    "tol": 0.07,
+    "hypothesis": "Exp(scale 2) mean = 2; 'average' assumed to be arithmetic mean"
+   },
+   "observed": 1.672345,
+   "refuted": true,
+   "reveal": "def average(xs):\n    s = sorted(xs)\n    return mean(s[len(s)//10 : -len(s)//10])"
+  },
+  "e1": {
+   "prediction": {
+    "value": 30.0,
+    "tol": 2.0,
+    "hypothesis": "assume equal-distance segments -> harmonic mean 2*20*60/80 = 30"
+   },
+   "observed": 30.0,
+   "refuted": false,
+   "reveal": null
+  },
+  "e2": {
+   "prediction": {
+    "value": 0.05,
+    "tol": 0.02,
+    "hypothesis": "assume equal strata weights -> (0.83 - 0.78) = 0.05"
+   },
+   "observed": 0.053301,
+   "refuted": false,
+   "reveal": null
+  },
+  "e3": {
+   "prediction": {
+    "value": 0.279,
+    "tol": 0.05,
+    "hypothesis": "assume screening prevalence ~2% -> PPV = 0.95*0.02/(0.95*0.02+0.05*0.98)"
+   },
+   "observed": 0.421969,
+   "refuted": true,
+   "reveal": "population prevalence (from data file): 0.037"
+  }
+ }
+}

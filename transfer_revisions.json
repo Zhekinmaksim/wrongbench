@@ -1,0 +1,10 @@
+{
+ "t1": {"diagnosis": "data", "value": 82.0, "tol": 0.5,
+   "model_change": "Confirmed unit mix: obs 96.93 = 82*(1+1.20462*f) -> hidden lb fraction f ~ 0.15. Clean-data mean = 82 kg. Same defect family as b1/b2: ingestion merges sheets without unit normalization."},
+ "t2": {"diagnosis": "code", "value": 0.62, "tol": 0.06,
+   "model_change": "Confirmed c1 pattern: Random(999) constructed inside replicate loop -> all 2000 resamples identical -> CI width 0. Fix: seed once. Correct width = 2*1.96*sd/sqrt(n) = 0.62."},
+ "t3": {"diagnosis": "measurement", "value": 27.66, "tol": 1.2,
+   "model_change": "Confirmed d-family: mean_latency() silently drops top decile of a right-skewed distribution -> 21.1 vs true mean exp(3+0.32)=27.66. Fix: report p90-trimmed and full mean as separate named metrics."},
+ "t4": {"diagnosis": "conceptual", "value": 30.0, "tol": 0.5,
+   "model_change": "Frame was equal-FUEL, not equal-distance: total miles / total gallons = (20g1*... ) -> arithmetic mean 30 mpg. e1 lesson generalized: mpg aggregation depends on what is held equal; the number is meaningless without the weighting frame."}
+}
